@@ -1,0 +1,14 @@
+Source: libra-cli
+Section: net
+Priority: optional
+Maintainer: Jihai Xiong <xiongjiahi@baidu.com>
+Build-Depends: debhelper (>= 8.0.0),
+               dh-systemd
+Standards-Version: 3.9.3
+
+Package:libra-cli
+Architecture: any
+Built-Using: ${misc:Built-Using}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Libra-Cli based on Frr-Vtysh

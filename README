@@ -1,0 +1,15 @@
+frr-cli is vtysh part of frr 7.2-0
+
+how to install:
+ cd frr-cli && make && make install
+
+how to use:
+ vtysh
+
+install dependency deb libyang:
+    https://github.com/CESNET/libyang.git
+or install libyang deb built:
+    dpkg -i dependency_deb/libyang-dev_1.0.73_amd64.deb
+
+frr source:
+    https://github.com/FRRouting/frr
