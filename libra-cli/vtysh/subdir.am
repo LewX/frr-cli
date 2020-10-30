@@ -3,17 +3,17 @@
 #
 
 if VTYSH
-bin_PROGRAMS += vtysh/vtysh
+bin_PROGRAMS += vtysh/libra-cli
 dist_examples_DATA += vtysh/vtysh.conf.sample
 endif
 
-vtysh_vtysh_SOURCES = \
+vtysh_libra_cli_SOURCES = \
 	vtysh/vtysh_main.c \
 	vtysh/vtysh.c \
 	vtysh/vtysh_user.c \
 	vtysh/vtysh_config.c \
 	# end
-nodist_vtysh_vtysh_SOURCES = \
+nodist_vtysh_libra_cli_SOURCES = \
 	vtysh/vtysh_cmd.c \
 	# end
 CLEANFILES += vtysh/vtysh_cmd.c
@@ -23,7 +23,7 @@ noinst_HEADERS += \
 	vtysh/vtysh_user.h \
 	# end
 
-vtysh_vtysh_LDADD = lib/libfrr.la $(LIBCAP) $(LIBREADLINE) $(LIBS) $(LIBPAM)
+vtysh_libra_cli_LDADD = lib/libfrr.la $(LIBCAP) $(LIBREADLINE) $(LIBS) $(LIBPAM)
 
 AM_V_EXTRACT = $(am__v_EXTRACT_$(V))
 am__v_EXTRACT_ = $(am__v_EXTRACT_$(AM_DEFAULT_VERBOSITY))

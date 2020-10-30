@@ -11,7 +11,7 @@ all:
 	popd
 
 install: 
-	sudo dpkg -i libra-cli_1.0.1_amd64.deb
+	sudo dpkg -i --force-overwrite libra-cli_1.0.1_amd64.deb
 
 clean:
 	rm *.deb
